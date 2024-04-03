@@ -1,2 +1,1 @@
-# 40-questions-web
-40-questions website
+# 40-question-web
