@@ -2,29 +2,21 @@
 
 一个基于 Next.js 的网页应用，帮助用户通过回答 40 个深度问题进行自我反思和记录。
 
+## 💡 项目灵感
+
+本项目的问题内容和理念灵感来自于 [kepano/40-questions](https://github.com/kepano/40-questions)，这是一个优秀的自我反思问题集合。我们在此基础上：
+
+- 🌐 **创建了网页版本**：将原本的文本问题转化为交互式网页应用
+- 💾 **增加了自动保存功能**：解决了填写过程中数据丢失的问题  
+- 📊 **添加了进度跟踪**：可视化显示完成情况，提升用户体验
+- 📄 **支持一键导出**：将答案导出为格式化的 Markdown 文档
+- 🎨 **现代化界面设计**：提供更好的视觉体验和交互感受
+
+感谢 [@kepano](https://github.com/kepano) 提供了如此有价值的问题集合，为自我反思和个人成长提供了很好的框架。
+
 ## 🌐 在线体验
 
 **立即访问：** [https://40-questions-web.vercel.app](https://40-questions-web.vercel.app)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/pfeak/40-questions-web)
-
-## 📸 应用截图
-
-### 🏠 首页
-- 现代化设计，清晰的功能介绍
-- 两个问题集的入口卡片
-- 功能特点展示
-
-### 📝 问卷页面
-- 美观的问题卡片布局
-- 实时进度跟踪显示
-- 已回答问题的视觉反馈
-- 一键导出和清空功能
-
-### 📄 导出文档
-- 格式化的 Markdown 文档
-- 完整的统计信息
-- 清晰的问答结构
 
 ## ✨ 功能特点
 
@@ -182,7 +174,7 @@ npm run dev
 
 ## 🤝 贡献
 
-我们欢迎各种形式的贡献！
+欢迎各种形式的贡献！
 
 ### 如何贡献
 1. **🐛 报告问题**：在 [Issues](https://github.com/pfeak/40-questions-web/issues) 中报告 bug 或提出功能建议
@@ -203,7 +195,9 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ## 🙏 致谢
 
-感谢所有为这个项目做出贡献的开发者和用户！
+- **问题集来源**：感谢 [kepano/40-questions](https://github.com/kepano/40-questions) 提供的优秀问题集合
+- **开源社区**：感谢所有为这个项目做出贡献的开发者和用户
+- **技术栈**：感谢 Next.js、React、Tailwind CSS 等开源项目
 
 ---
 
