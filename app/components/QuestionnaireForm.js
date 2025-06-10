@@ -83,8 +83,8 @@ export default function QuestionnaireForm({ questions, title, storageKey }) {
       link.href = url;
       
       // 生成更友好的文件名
-      const safeTitle = title.replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-      const dateStr = date.replace(/\//g, '-');
+      const safeTitle = title.replace(/[\/\\:*?"<>|]/g, '').replace(/\s+/g, '-');
+      const dateStr = new Date().toISOString().split('T')[0]; // 使用ISO格式日期 YYYY-MM-DD
       link.download = `${safeTitle}-${dateStr}.md`;
       
       document.body.appendChild(link);
