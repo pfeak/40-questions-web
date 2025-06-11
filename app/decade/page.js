@@ -47,7 +47,7 @@ export default function Page() {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <div className="bg-white shadow-sm border-b">                <div className="max-w-4xl mx-auto p-4"></div>            </div>
+
             <QuestionnaireForm 
                 questions={questions}
                 title="每 10 年问自己的 40 个问题"
