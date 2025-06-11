@@ -48,11 +48,7 @@ export default function Page() {
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="bg-white shadow-sm border-b">
-                <div className="max-w-4xl mx-auto p-4">
-                    <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
-                        ← 返回首页
-                    </Link>
-                </div>
+                <div className="max-w-4xl mx-auto p-4"></div>
             </div>
             <QuestionnaireForm 
                 questions={questions}
