@@ -15,7 +15,7 @@ describe('数据访问测试', () => {
       "What new things did you try this year?",
       "Did you keep your resolutions?"
     ])
-    expect(fetchMock).toHaveBeenCalledWith('data/questions/year.md', {
+    expect(fetchMock).toHaveBeenCalledWith('questions/year.md', {
       headers: { 'Accept': 'text/markdown' }
     })
   })

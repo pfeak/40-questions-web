@@ -2,7 +2,7 @@ export async function loadQuestions(type) {
   try {
     const testPrefix = process.env.NODE_ENV === 'test' ? '' : '/'
     const response = await fetch(
-      `${testPrefix}data/questions/${type}.md`,
+      `${testPrefix}questions/${type}.md`,
       { 
         headers: {
           'Accept': 'text/markdown'
