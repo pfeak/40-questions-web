@@ -1,19 +1,18 @@
 export async function loadQuestions(type) {
   try {
+    const testPrefix = process.env.NODE_ENV === 'test' ? '' : '/'
     const response = await fetch(
-      `https://raw.githubusercontent.com/kepano/40-questions/main/zh-CN/questions/${type}.md`,
+      `${testPrefix}data/questions/${type}.md`,
       { 
-        next: { revalidate: 3600 },
         headers: {
-          'Accept': 'text/markdown',
-          'Cache-Control': 'public, max-age=3600'
+          'Accept': 'text/markdown'
         }
       }
     );
     
     if (!response.ok) {
-      console.error(`GitHub请求失败: ${response.status} ${response.statusText}`);
-      throw new Error('从GitHub加载问题失败');
+      console.error(`数据请求失败: ${response.status} ${response.statusText}`);
+      throw new Error('加载问题失败');
     }
     
     const text = await response.text();
@@ -22,7 +21,7 @@ export async function loadQuestions(type) {
       .map(line => line.replace(/^\d+\.\s*/, '').trim())
       .filter(question => question.length > 0);
 
-    console.log(`从GitHub加载${type}问题成功，共${questions.length}条`);
+    console.log(`加载${type}问题成功，共${questions.length}条`);
     return questions;
     
   } catch (error) {
